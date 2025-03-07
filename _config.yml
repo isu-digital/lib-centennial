@@ -55,6 +55,15 @@ organization-link: https://cdil.lib.uidaho.edu/
 organization-logo-banner: https://cdil.lib.uidaho.edu/storying-extinction/assets/img/cdil.png
 organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
 
+# Updates collection
+collections:
+  exhibit:
+    sort_by: order
+    output: true
+  themes:
+    sort_by: order
+    output: true
+
 ##########
 # ROBOTS EXCLUDE
 #
