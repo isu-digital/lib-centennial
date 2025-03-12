@@ -1,7 +1,7 @@
 ---
-title: Depression and WWII Era
+title: Pre-Parks
 layout: exhibit
-permalink: /depression.html
+permalink: /preparks.html
 ---
 
 {% include cb/about_the_about.md %}

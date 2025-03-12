@@ -1,7 +1,7 @@
 ---
-title: 1983
+title: 1925 Building
 layout: exhibit
-permalink: /1983.html
+permalink: /1925.html
 ---
 
 {% include cb/about_the_about.md %}

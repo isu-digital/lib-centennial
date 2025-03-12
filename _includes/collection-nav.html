@@ -25,7 +25,8 @@
                     <a class="nav-link{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.title }}</a>
                 </li>
                 {% endfor %}
-                <li class="nav-item dropdown">  
+                <!--temporarily remove theme pages-->
+                <!--<li class="nav-item dropdown">  
                     {%- assign themeStubs = site.themes | map: 'url' -%}
                     <a class="nav-link dropdown-toggle{% if themeStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Themes</a>
                     <div class="dropdown-menu">
@@ -33,7 +34,7 @@
                         <a class="dropdown-item {% if page.url == t.url %}active{% endif %}" href="{{ t.url | relative_url }}">{{ t.title }}</a>
                         {% endfor %}
                     </div>
-                </li>
+                </li>-->
                 {% for nav in navItems %}
                 {% unless nav.stub %}
                 <li class="nav-item dropdown">
