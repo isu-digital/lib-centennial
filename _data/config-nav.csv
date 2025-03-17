@@ -1,5 +1,6 @@
 display_name,stub,dropdown_parent
 Home,/,
+Home (option 2),/home2.html
 Visualizations,,
 Browse,/browse.html,Visualizations
 Subjects,/subjects.html,Visualizations
