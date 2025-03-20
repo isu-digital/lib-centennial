@@ -19,10 +19,27 @@
         align-items: center; /* Centers items horizontally */
         padding: 2em;
     }
-    #title-text {
-        font-weight: bold;
-        font-size: 3rem;
-        font-family: 'Boldonse', sans-serif;
+    .title-text {
+        font-size: 7rem;
+        font-family: "Boldonse", sans-serif; /* Boldonse, Almendra SC, Alumni Sans Pinstripe */
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .p-2 {
+        border-radius: 30px;
+    }
+    #toc-box {
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
+        color: white;
+        background: rgba(200, 16, 46, 0.9);
+        transition: background 0.3s ease;
+    }
+    #toc-box:hover {
+        background: rgba(200, 16, 46, 1); /* Solid background on hover */
+        transform: scale(1.1);
     }
     @media screen and (max-width: 576px) {
         #home-title-box {
@@ -33,17 +50,16 @@
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
     <div id="home-title-box"  >
-        <div class="p-2 text-center text-black bg-light bg-opacity-75">
+        <div class="p-2 text-center text-dark bg-light bg-opacity-75">
             {% if site.organization-logo-nav %}
             <a class="d-none d-md-block" href="{{ site.organization-link }}" target="_blank" rel="noopener">
                 <img id="home-banner-logo" src="{{ site.organization-logo-nav | relative_url }}" alt="{{ site.organization-name | escape }} home" >
             </a>{% endif %}
-            <h1 class="title-text">{{ site.title }}</h1>
-            {% if site.tagline %}<p class="mb-0">{{ site.tagline }}</p>{% endif %}
+            <h1 class="title-text">THE HEART</h1>
+            <h1>of the University</h1>
         </div>
-        {% unless site.data.theme.featured-image contains '/' %}
-        <div class="position-absolute bottom-0 end-0 px-2 bg-dark bg-opacity-75">
-            <a class="text-white fs-6" href="{{ site.data.featured_item.link | relative_url }}" title="{{ site.data.featured_item.alt | escape }}">Featured Image</a>
-        </div>{% endunless %}
+    </div>
+    <div class="toc-test">
+        <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="\preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
     </div>
 </div>
