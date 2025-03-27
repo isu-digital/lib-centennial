@@ -1,0 +1,91 @@
+<style>
+    .navbar-toggler-icon {
+        width: 3rem; /* Adjust the width */
+        height: 3rem; /* Adjust the height */
+    }
+    .nav-item {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    .offcanvas-title {
+        margin-bottom: 0.5rem; /* Add spacing below the title */
+    }
+    .offcanvas-description {
+        font-size: 1rem; /* Adjust font size for the description */
+        color: #ccc; /* Optional: Change text color */
+        margin: 0; /* Remove default margins */
+    }
+</style>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Button to toggle the offcanvas menu -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Organization logo for mobile view -->
+        {% if site.organization-logo-nav %}
+        <span class="d-lg-none text-end">
+            <a href="{{ site.organization-link }}" target="_blank" rel="noopener">
+                <img class="img-fluid" id="mobile-nav-image" src="{{ site.organization-logo-nav | relative_url }}" title="{{ site.organization-name }}" alt="{{ site.organization-name | escape }} home">
+            </a>
+        </span>
+        {% endif %}
+    </div>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header">
+            <div>
+                <h3 class="offcanvas-title" id="offcanvasNavLabel">{{ site.title }}</h4>
+                <p class="offcanvas-description">{{ site.description }}</p> <!-- Moved inside a container below the title -->
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.display_name and item.dropdown_parent == nil' -%} 
+                {% for nav in navItems %}
+                {% if nav.stub %}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% for e in site.exhibit %}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.title }}</a>
+                </li>
+                {% endfor %}
+        <!--temporarily remove theme pages-->
+                <!--<li class="nav-item dropdown">  
+                    {%- assign themeStubs = site.themes | map: 'url' -%}
+                    <a class="nav-link dropdown-toggle{% if themeStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Themes</a>
+                    <div class="dropdown-menu">
+                        {% for t in site.themes %}
+                        <a class="dropdown-item {% if page.url == t.url %}active{% endif %}" href="{{ t.url | relative_url }}">{{ t.title }}</a>
+                        {% endfor %}
+                    </div>
+                </li>-->
+                {% for nav in navItems %}
+                {% unless nav.stub %}
+                <li class="nav-item dropdown">
+                    {% assign navChildren = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nav.display_name' %}
+                    {%- assign childStubs = navChildren | map: 'stub' -%}
+                    <a class="nav-link dropdown-toggle{% if childStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ nav.display_name }}</a>
+                    <div class="dropdown-menu">
+                        {% for c in navChildren %}
+                        <a class="dropdown-item {% if page.url == c.stub %}active{% endif %}" href="{{ c.stub | relative_url }}">{{ c.display_name }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endunless %}
+                {%- endfor -%}
+            </ul>
+
+            {% include nav-search-lunr.html %}
+            
+        </div>
+    </div>
+</nav>

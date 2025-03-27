@@ -20,8 +20,8 @@
         padding: 2em;
     }
     .title-text {
-        font-size: 7rem;
-        font-family: "Boldonse", sans-serif; /* Boldonse, Almendra SC, Alumni Sans Pinstripe */
+        font-size: 8rem;
+        font-family: "Almendra SC", sans-serif; /* Boldonse, Almendra SC, Alumni Sans Pinstripe */
         padding-top: 0.5em;
         padding-left: 1em;
         padding-right: 1em;
@@ -29,17 +29,18 @@
     .p-2 {
         border-radius: 30px;
     }
+    .toc-test {
+        padding-top: 2em;
+    }
     #toc-box {
-        position: absolute;
-        right: 2em;
-        bottom: 2em;
+        padding: 1em;
         color: white;
         background: rgba(200, 16, 46, 0.9);
-        transition: background 0.5s ease;
+        transition: transform 0.3s ease, background 0.3s ease;
     }
     #toc-box:hover {
         background: rgba(200, 16, 46, 1); /* Solid background on hover */
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
     @media screen and (max-width: 576px) {
         #home-title-box {
@@ -55,11 +56,11 @@
             <a class="d-none d-md-block" href="{{ site.organization-link }}" target="_blank" rel="noopener">
                 <img id="home-banner-logo" src="{{ site.organization-logo-nav | relative_url }}" alt="{{ site.organization-name | escape }} home" >
             </a>{% endif %}
-            <h1 class="title-text">THE HEART</h1>
+            <h1 class="title-text">The Heart</h1>
             <h1>of the University</h1>
+            <div class="toc-test">
+                <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="\preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
+            </div>
         </div>
-    </div>
-    <div class="toc-test">
-        <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="\preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
     </div>
 </div>
