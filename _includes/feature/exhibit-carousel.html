@@ -1,0 +1,111 @@
+{% comment %} 
+
+    Image item carousel.
+    This include adds a Bootstrap Carousel component populated with randomly selected image items, designed with index page in mind. 
+    https://getbootstrap.com/docs/5.1/components/carousel/
+
+    E.G. --> {% include feature/exhibit-carousel.html title="Sample Items" height=450 %}
+
+    Options:
+
+    - "height" = the height of the carousel in px, just give the number (optional, default 300)
+    - "carousel-type" = the selection of items featured in the carousel, choose from thumb (all items with image_thumb) or small (all items with image_small). (optional, default thumb)
+
+    - "title" = card title text inside card content area (optional)
+    - "header" = card header text in bar above card content (optional)
+    - "heading_level" = customize the level of the heading if necessary for accessibility, choose "h1", "h2", "h3", etc (optional, default "h2")
+    - "max" = maximum images selected for slide show (optional, default 9. Do not make too big!)
+    - "btn-color" = a bootstrap color class to theme the buttons. Can be any bootstrap template color (e.g. info, success) or outline (e.g. outline-info, outline-success), including colors created in config-theme-colors. (optional, default "primary")
+    - "btn-text" = the label used in the link btn to view the carousel item (optional, default "View Item")
+   
+    
+{%- endcomment -%}
+
+{%- assign carousel-max = include.max | default: 9 -%}
+{%- assign btn-color = include.btn-color | default: "primary" -%}
+{%- assign btn-text = include.btn-text | default: "View Item" -%}
+{%- assign carousel-items = include.objectid | split: ";" -%}
+
+
+{%- comment -%}
+    Set up carousel div
+{%- endcomment -%}
+<style>
+    #imageCarousel .carousel-item { height: {{ include.height | remove: 'px' | strip | default: '300' }}px; }
+</style>
+<div class="card mb-3">
+    {% if include.header %}
+        <{{ include.heading_level | default: 'h2' | strip }} class="card-header h5">{{ include.header }}</{{ include.heading_level | default: 'h2' | strip }}>
+    {% endif %}
+    <div class="card-body">
+        {% if include.title %}
+            <{{ include.heading_level | default: 'h2' | strip }} class="card-title h5">{{ include.title }}</{{ include.heading_level | default: 'h2' | strip }}>
+        {% endif %}
+        
+        <div id="imageCarousel" class="carousel slide bg-dark rounded mb-3" data-bs-ride="false">
+            <div id="carouselIndicators" class="carousel-indicators"></div>
+            <div id="carouselInner" class="carousel-inner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+{%- comment -%}
+    add slides using JS to allow for randomizing slide show
+{%- endcomment -%}
+<script>
+    /* Build carousel items array */
+    var carouselItems = [
+        {% for objectid in carousel-items %}
+            {%- assign carousel-item = site.data[site.metadata] | where: "objectid", objectid | first -%}
+            {% if carousel-item %}
+                {
+                    title: {{ carousel-item.title | jsonify }},
+                    objectid: "{{ carousel-item.objectid }}",
+                    image: "{{ carousel-item.image_small | relative_url }}",
+                    parentid: "{{ carousel-item.parentid }}",
+                    alt: {{ carousel-item.image_alt_text | default: carousel-item.title | jsonify }}
+                }
+                {% unless forloop.last %},{% endunless %}
+            {% endif %}
+        {% endfor %}
+    ];
+
+    /* Shuffle items */
+    carouselItems.sort(function() { return 0.5 - Math.random(); });
+
+    /* Add items to carousel */
+    var carousel = document.getElementById("carouselInner");
+    var carouselIndicators = document.getElementById("carouselIndicators");
+    var slides = "";
+    var indicators = "";
+    for (var i = 0; i < Math.min(carouselItems.length, {{ carousel-max }}); i++) {
+        var item = carouselItems[i];
+        var itemLink = item.parentid
+            ? '{{ "/items/" | relative_url }}' + item.parentid + '.html#' + item.objectid
+            : '{{ "/items/" | relative_url }}' + item.objectid + '.html';
+
+        // Create indicator
+        indicators += `<button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active" aria-current="true"' : ''} aria-label="Slide ${i + 1}"></button>`;
+
+        // Create slide
+        slides += `
+            <div class="carousel-item py-2${i === 0 ? ' active' : ''}">
+                <img class="d-block h-100 mx-auto lazyload" alt="${item.alt}" data-src="${item.image}">
+                <div class="carousel-caption">
+                    <h3 class="carousel-item-title text-white py-2 h6">${item.title}</h3>
+                    <a href="${itemLink}" class="btn btn-sm btn-{{ btn-color }}">{{ btn-text }}</a>
+                </div>
+            </div>`;
+    }
+
+    // Add indicators and slides to the carousel
+    carouselIndicators.innerHTML = indicators;
+    carousel.innerHTML = slides;
+</script>
