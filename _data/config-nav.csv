@@ -1,10 +1,8 @@
 display_name,stub,dropdown_parent
 Home,/,
-Visualizations,,
-Browse,/browse.html,Visualizations
-Subjects,/subjects.html,Visualizations
-Locations,/locations.html,Visualizations
-Map,/map.html,Visualizations
-Timeline,/timeline.html,Visualizations
-Data,/data.html,Visualizations
-About,/about.html,Visualizations
+Explore,,
+Browse Collection,/browse.html,Explore
+Subjects,/subjects.html,Explore
+Timeline,/parks_timeline.html,Explore
+Data,/data.html,Explore
+About,/about.html,Explore
