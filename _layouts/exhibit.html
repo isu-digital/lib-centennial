@@ -2,12 +2,30 @@
 # default "Exhibit" page layout
 layout: default
 ---
-<div class="container my-4 about-contents">
-    <h1 class="display-4 exhibit-title">{{ page.title }} {% if page.byline %}<br><span class="fs-5 ms-5">{{ page.byline }}</span>{% endif %}</h1>
 
-    {{ content }}
-
-    <div class="text-center next-buttons">
-        {% if page.next %}<a class="display-6 text-dark" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &raquo;</a>{% endif %}
+<div id="about-wrapper">
+    <div id="about-toc-wrapper">
+        {% unless page.toc == false %}
+        <div id="about-toc">
+            <div id="about-toc-title">
+                <button class="btn btn-light" data-bs-toggle="collapse" data-bs-target="#about-toc-list" aria-expanded="false" aria-controls="about-toc-list">
+                    Contents
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="about-toc-list" class="collapse" >
+            {% include cb/jekyll-toc.html html=content h_min=1 h_max=3 skip_no_ids=true class="jekyll-toc-list" credits=false %}
+            </div>
+        </div>
+        {% endunless %}
+    </div>
+    <div id="about-contents-wrapper">
+        <h1 class="display-4 exhibit-title">{{ page.title }} {% if page.byline %}<br><span class="fs-5 ms-5">{{ page.byline }}</span>{% endif %}</h1>
+        {{ content }}
+        <div class="text-center next-buttons">
+            {% if page.next %}<a class="display-6 text-dark" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &raquo;</a>{% endif %}
+        </div>
     </div>
 </div>

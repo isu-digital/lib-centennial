@@ -5,10 +5,15 @@
 
 // exhibit styles
 .exhibit-title {
-    margin-top: 8rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
 }
 .next-buttons {
     margin-top: 3rem;
     margin-bottom: 10rem;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
