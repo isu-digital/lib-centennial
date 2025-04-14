@@ -18,7 +18,7 @@ Joseph Arthur was appointed at the November 1877 Board meeting as the first Libr
 
 A call for a dedicated library building had started as early as January 1870, and through a combination of increased enrollment, full-time staffing, and encouragement of use by the administration, the library had well outgrown its space. In 1890, the legislature funded a new building to house a library, museum, chapel, gymnasium, and laboratory space. 
 
-{% include feature/image-float.html objectid="parkscentennial7" width="50" float="start" alt="typed document of the president's report" width="25" %}
+{% include feature/image-float.html objectid="parkscentennial7" float="start" alt="typed document of the president's report" width="25" %}
 
 Morrill Hall was dedicated on June 16, 1891, with the new library located south of the central stairway on the first floor, with a capacity of 50,000 volumes. The new library was open for the fall 1891 term. 
 
