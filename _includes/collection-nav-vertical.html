@@ -58,7 +58,7 @@
             <ul class="navbar-nav">
                 {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.display_name and item.dropdown_parent == nil' -%} 
                 {% for nav in navItems %}
-                {% if nav.stub %}
+                {% if nav.display_name == "Home" %}
                 <li class="nav-item">
                     <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
                 </li>
@@ -69,7 +69,7 @@
                     <a class="nav-link{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.title }}</a>
                 </li>
                 {% endfor %}
-        <!--temporarily remove theme pages-->
+                <!--temporarily remove theme pages-->
                 <!--<li class="nav-item dropdown">  
                     {%- assign themeStubs = site.themes | map: 'url' -%}
                     <a class="nav-link dropdown-toggle{% if themeStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Themes</a>
@@ -92,6 +92,13 @@
                     </div>
                 </li>
                 {% endunless %}
+                {%- endfor -%}
+                {% for nav in navItems %}
+                {% if nav.stub %}{%- unless nav.display_name == "Home" -%}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
+                </li>
+                {% endunless %}{% endif %}
                 {%- endfor -%}
             </ul>
 
