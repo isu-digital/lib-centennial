@@ -14,7 +14,7 @@
             <ul class="navbar-nav me-auto">
                 {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.display_name and item.dropdown_parent == nil' -%} 
                 {% for nav in navItems %}
-                {% if nav.stub %}
+                {% if nav.display_name == "Home" %}
                 <li class="nav-item">
                     <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
                 </li>
@@ -48,6 +48,13 @@
                     </div>
                 </li>
                 {% endunless %}
+                {%- endfor -%}
+                {% for nav in navItems %}
+                {% if nav.stub %}{%- unless nav.display_name == "Home" -%}
+                <li class="nav-item">
+                    <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
+                </li>
+                {% endunless %}{% endif %}
                 {%- endfor -%}
             </ul>
             
