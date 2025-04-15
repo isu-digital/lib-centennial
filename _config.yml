@@ -52,8 +52,8 @@ metadata: cb_centennial-exhibit-metadata
 #
 organization-name: "Digital Scholarship and Initiatives"
 organization-link: https://digital.lib.iastate.edu
-# organization-logo-banner: 
-organization-logo-nav: https://isuu00001library102stg.z21.web.core.windows.net/assets/media/ISU_Library_Center_White.png
+organization-logo-banner: https://digital.lib.iastate.edu/assets/media/logos/png/red/isu_library_center_red.png
+organization-logo-nav: https://digital.lib.iastate.edu/assets/media/logos/png/red/isu_library_center_red.png
 
 # Updates collection
 collections:
