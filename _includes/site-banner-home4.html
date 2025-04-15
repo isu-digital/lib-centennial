@@ -19,9 +19,22 @@
         align-items: center; /* Centers items horizontally */
         padding: 2em;
     }
+    @font-face {
+        font-family:'Merriweather';
+        src: url('assets\fonts\Merriweather-Black.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
     .title-text {
         font-size: 8rem;
-        font-family: "Almendra SC", sans-serif; /* Boldonse, Almendra SC, Alumni Sans Pinstripe */
+        font-family: "Merriweather"; 
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .subtitle-text {
+        font-size: 4rem;
+        font-family: "Merriweather"; 
         padding-top: 0.5em;
         padding-left: 1em;
         padding-right: 1em;
@@ -53,7 +66,7 @@
     <div id="home-title-box"  >
         <div class="p-2 text-center text-dark bg-light bg-opacity-75">
             <h1 class="title-text">The Heart</h1>
-            <h1>of the University</h1>
+            <h1 class="subtitle-text">of the University</h1>
             <div class="toc-test">
                 <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="/lib-centennial/preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
             </div>
