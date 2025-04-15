@@ -6,7 +6,7 @@ permalink: /preparks.html
 
 {% include feature/image-float.html objectid="parkscentennial16" width="50" float="end" alt="black and white photograph of Old Main building" %}
 
-A library has been part of the services available to students on the Iowa State campus since the institution opened its doors in 1868. Originally housed on the first floor of the Main Building, the library was in an 18 x 40-foot room on the ground floor and contained about 2,400 volumes. Two wings were added to the building in 1870, and the library moved to a new 35 x 50-foot room on the first floor of the south wing. The operating budget for the first year of the library was $2,329.66.
+A library has been part of the services available to students on the Iowa State campus since the institution's early days. Originally housed on the first floor of the Main Building beginning in 1868, the library was in an 18 x 40-foot room on the ground floor and contained about 2,400 volumes. Two wings were added to the building in 1870, and the library moved to a new 35 x 50-foot room on the first floor of the south wing. The operating budget for the first year of the library was $2,329.66.
 
 The library was administered by President Adonijah Strong Welch who would carry out the acquisition of materials while the day-to-day operation of managing the library was done by two senior female students.
 
