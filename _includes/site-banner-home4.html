@@ -1,0 +1,66 @@
+<style>
+    #home-banner {
+        background-image: url('assets/img/centennial-test-header.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: flex-end; /* Aligns items to the right */
+        align-items: center; /* Centers items vertically */
+    }
+    #home-title-box {
+        width: 60%; /* Takes up half the width of the banner */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centers items vertically */
+        align-items: center; /* Centers items horizontally */
+        padding: 2em;
+    }
+    .title-text {
+        font-size: 8rem;
+        font-family: "Almendra SC", sans-serif; /* Boldonse, Almendra SC, Alumni Sans Pinstripe */
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .p-2 {
+        border-radius: 30px;
+    }
+    .toc-test {
+        padding-top: 2em;
+    }
+    #toc-box {
+        padding: 1em;
+        color: white;
+        background: rgba(200, 16, 46, 0.9);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+    #toc-box:hover {
+        background: rgba(200, 16, 46, 1); /* Solid background on hover */
+        transform: scale(1.2);
+    }
+    @media screen and (max-width: 576px) {
+        #home-title-box {
+            max-height: 500px;
+            width: 100%;
+        }
+    }
+</style>
+<div id="home-banner" class="container-fluid mb-0 p-0">
+    <div id="home-title-box"  >
+        <div class="p-2 text-center text-dark bg-light bg-opacity-75">
+            {% if site.organization-logo-nav %}
+            <a class="d-none d-md-block" href="{{ site.organization-link }}" target="_blank" rel="noopener">
+                <img id="home-banner-logo" src="{{ site.organization-logo-nav | relative_url }}" alt="{{ site.organization-name | escape }} home" >
+            </a>{% endif %}
+            <h1 class="title-text">The Heart</h1>
+            <h1>of the University</h1>
+            <div class="toc-test">
+                <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="\preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
+            </div>
+        </div>
+    </div>
+</div>

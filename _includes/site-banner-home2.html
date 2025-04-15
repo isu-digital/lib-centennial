@@ -1,0 +1,81 @@
+<style>
+    #home-banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(255, 255, 255, 1) 100%), 
+                      url('assets/img/library-skeleton-1923.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+    #home-title-box {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0em;
+    }
+    .title-text {
+    font-size: 5.5rem;
+    font-family: "Modern Antiqua", sans-serif;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+    .p-2 {
+    border-radius: 0 30px 30px 0;
+    background-color: rgba(238, 212, 132, 0.8);
+}
+    #toc-box {
+        position: absolute;
+        right: 2em;
+        bottom: 2em;
+        color: white;
+        background: rgba(200, 16, 46, 1);
+        transition: background 0.3s ease;
+    }
+    #toc-box:hover {
+        background: rgba(124, 37, 41, 1);
+        transform: scale(1.1);
+    }
+    #home-banner-logo-overlay {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        width: 350px;
+        height: auto;
+        z-index: 2;
+    }
+    @media screen and (max-width: 576px) {
+        #home-title-box {
+            max-height: 500px;
+            width: 100%;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap" rel="stylesheet">
+<div id="home-banner" class="container-fluid mb-0 p-0">
+    <img id="home-banner-logo-overlay" src="assets/img/centennial-lib-logo.png" alt="Centennial Library Logo">
+    <div id="home-title-box">
+        <div class="p-2 text-center text-dark bg-opacity-75">
+            {% if site.organization-logo-nav %}
+            <a class="d-none d-md-block" href="{{ site.organization-link }}" target="_blank" rel="noopener">
+                <img id="home-banner-logo" src="{{ site.organization-logo-nav | relative_url }}" alt="{{ site.organization-name | escape }} home">
+            </a>{% endif %}
+            <h1 class="title-text">THE HEART OF THE UNIVERSITY</h1>
+            <h1>Parks Library at 100</h1>
+        </div>
+    </div>
+    <div class="toc-test">
+        <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="\preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
+    </div>
+</div>
