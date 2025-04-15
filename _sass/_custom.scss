@@ -12,3 +12,8 @@
     margin-top: 3rem;
     margin-bottom: 10rem;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
