@@ -1,7 +1,7 @@
 <style>
     .navbar-toggler-icon {
-        width: 3rem; /* Adjust the width */
-        height: 3rem; /* Adjust the height */
+        width: 4.5rem; /* Adjust the width */
+        height: 4.5rem; /* Adjust the height */
     }
     .nav-item {
         padding: 0.5rem 0;
@@ -15,13 +15,24 @@
         color: #ccc; /* Optional: Change text color */
         margin: 0; /* Remove default margins */
     }
+ /* Make the navbar transparent */
+    .navbar {
+        background-color: transparent !important;
+        z-index: 10; /* Ensure it sits above the banner */
+    }
+
+    /* Ensure the offcanvas menu retains its black background */
+    .offcanvas {
+        background-color: #000 !important;
+    }
+
 </style>
 
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark position-absolute w-100">
     <div class="container-fluid">
         <!-- Button to toggle the offcanvas menu -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-dark"></span>
         </button>
 
         <!-- Organization logo for mobile view -->
@@ -38,7 +49,7 @@
     <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
         <div class="offcanvas-header">
             <div>
-                <h3 class="offcanvas-title" id="offcanvasNavLabel">{{ site.title }}</h4>
+                <h3 class="offcanvas-title" id="offcanvasNavLabel">{{ site.title }}</h3>
                 <p class="offcanvas-description">{{ site.description }}</p> <!-- Moved inside a container below the title -->
             </div>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
