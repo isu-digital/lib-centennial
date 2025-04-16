@@ -13,7 +13,6 @@
     }
     #home-title-box {
         width: 60%; /* Takes up half the width of the banner */
-        display: flex;
         flex-direction: column;
         justify-content: center; /* Centers items vertically */
         align-items: center; /* Centers items horizontally */
@@ -26,37 +25,31 @@
         padding-left: 1em;
         padding-right: 1em;
     }
-    .p-2 {
-        border-radius: 30px;
+    .enter-button:hover {
+        transform: scale(1.2) !important;
     }
-    .toc-test {
-        padding-top: 2em;
-    }
-    #toc-box {
-        padding: 1em;
-        color: white;
-        background: rgba(200, 16, 46, 0.9);
-        transition: transform 0.3s ease, background 0.3s ease;
-    }
-    #toc-box:hover {
-        background: rgba(200, 16, 46, 1); /* Solid background on hover */
-        transform: scale(1.2);
-    }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 1024px) {
         #home-title-box {
             max-height: 500px;
             width: 100%;
         }
+        .title-text {
+            font-size: 5rem;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        #home-banner {
+            background-position: right;
+        }
     }
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
-    <div id="home-title-box"  >
+    <div id="home-title-box">
         <div class="p-2 text-center text-dark bg-light bg-opacity-75">
             <h1 class="title-text">The Heart</h1>
             <h1>of the University</h1>
-            <div class="toc-test">
-                <a id="toc-box" class="py-3 px-5 display-6 fs-3 rounded" href="/lib-centennial/preparks.html"><strong>Enter the Exhibit &raquo;</strong></a>
-            </div>
+            <a class="btn btn-danger btn-lg fs-4 my-2 enter-button" href="{{ '/preparks.html' | relative_url }}">Enter the Exhibit &raquo;</a>
         </div>
     </div>
 </div>

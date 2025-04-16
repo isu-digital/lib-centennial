@@ -36,13 +36,11 @@
         </button>
 
         <!-- Organization logo for mobile view -->
-        {% if site.organization-logo-nav %}
-        <span class="d-lg-none text-end">
-            <a href="{{ site.organization-link }}" target="_blank" rel="noopener">
-                <img class="img-fluid" id="mobile-nav-image" src="{{ site.organization-logo-nav | relative_url }}" title="{{ site.organization-name }}" alt="{{ site.organization-name | escape }} home">
+        <span class="text-end">
+            <a href="{{ site.organization-link }}" target="_blank" rel="noopener" class="position-absolute top-0 end-0 p-3 liblogo-corner bg-light bg-opacity-100">
+                <img class="img-fluid" id="mobile-nav-image" src="https://digital.lib.iastate.edu/assets/media/logos/png/red/isu_library_center_red.png" title="{{ site.organization-name }}" alt="{{ site.organization-name | escape }} home" >
             </a>
         </span>
-        {% endif %}
     </div>
 
     <!-- Offcanvas menu -->

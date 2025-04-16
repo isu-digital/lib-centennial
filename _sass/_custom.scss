@@ -17,3 +17,12 @@
     clear: both;
     display: table;
 }
+
+.liblogo-corner {
+    border-bottom-left-radius: .25rem;
+}
+.liblogo-corner img{ height: 40px; }
+
+@media screen and (max-width: 1024px) {
+    .liblogo-corner img{ max-height: 1.5em; }
+}
