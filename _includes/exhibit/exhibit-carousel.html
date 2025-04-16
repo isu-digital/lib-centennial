@@ -33,7 +33,7 @@
 <style>
     #imageCarousel .carousel-item { height: {{ include.height | remove: 'px' | strip | default: '300' }}px; }
 </style>
-<div class="card mb-3">
+<div class="card mb-3 feature-include">
     {% if include.header %}
         <{{ include.heading_level | default: 'h2' | strip }} class="card-header h5">{{ include.header }}</{{ include.heading_level | default: 'h2' | strip }}>
     {% endif %}
@@ -70,7 +70,8 @@
                     objectid: "{{ carousel-item.objectid }}",
                     image: "{{ carousel-item.image_small | relative_url }}",
                     parentid: "{{ carousel-item.parentid }}",
-                    alt: {{ carousel-item.image_alt_text | default: carousel-item.title | jsonify }}
+                    alt: {{ carousel-item.image_alt_text | default: carousel-item.title | jsonify }},
+                    image_lg: "{% if carousel-item.display_template contains 'pdf' %}{{ carousel-item.image_small | relative_url }}{% else %}{{ carousel-item.object_location | relative_url }}{% endif %}"
                 }
                 {% unless forloop.last %},{% endunless %}
             {% endif %}
@@ -100,7 +101,7 @@
                 <img class="d-block h-100 mx-auto lazyload" alt="${item.alt}" data-src="${item.image}">
                 <div class="carousel-caption">
                     <h3 class="carousel-item-title text-white py-2 h6">${item.title}</h3>
-                    <a href="${itemLink}" class="btn btn-sm btn-{{ btn-color }}">{{ btn-text }}</a>
+                    <a class="spotlight gallery-img btn btn-sm btn-{{ btn-color }} text-white" data-download="false" title="${item.title}" href="${item.image_lg}">{{ btn-text }}</a>
                 </div>
             </div>`;
     }
