@@ -44,6 +44,14 @@
             background-position: right;
         }
     }
+    @media screen and (max-width: 400px) {
+        .title-text {
+            font-size: 3rem;
+        }
+        .title-text-small {
+            font-size: 2rem;
+        }
+    }
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
     <div id="home-title-box">
@@ -53,7 +61,7 @@
                 <br>
                 <span class="title-text">Heart</span>
                 <br>
-                <span class="display-3 pt-3 d-inline-block">of the University</span>
+                <span class="display-3 pt-3 d-inline-block title-text-small">of the University</span>
             </h1>
             <a class="btn btn-danger btn-lg fs-4 mt-3 mb-5 enter-button" href="{{ '/preparks.html' | relative_url }}">Enter the Exhibit &raquo;</a>
         </div>
