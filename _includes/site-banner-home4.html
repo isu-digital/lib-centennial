@@ -1,6 +1,6 @@
 <style>
     #home-banner {
-        background-image: url('assets/img/centennial-banner-2.jpg');
+        background-image: url('assets/img/centennial-banner-nologo.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -11,15 +11,21 @@
         justify-content: flex-end; /* Aligns items to the right */
         align-items: center; /* Centers items vertically */
     }
+    #home-logo {
+        max-width: 30%; /* Adjust the size of the logo */
+        height: auto;
+        margin-left: 2em;
+        margin-right: 10em; /* Add spacing between the logo and the title box */
+    }
     #home-title-box {
         flex-direction: column;
         justify-content: center; /* Centers items vertically */
         align-items: center; /* Centers items horizontally */
-        padding: 2em;
-        padding-right: 13%;
+        padding: 1em;
+        padding-right: 10%;
     }
     .title-text {
-        font-size: 8rem;
+        font-size: 7rem;
         padding-top: 0.5em;
     }
     .enter-button:hover {
@@ -32,7 +38,7 @@
         #home-title-box {
             max-height: 500px;
             width: 100%;
-            padding: 2em;
+            padding: 1em;
         }
         .title-text {
             font-size: 5rem;
@@ -41,7 +47,15 @@
             padding-right: 0;
         }
         #home-banner {
-            background-position: right;
+            flex-direction: column; /* Stack the logo and title box vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            padding: 1em; /* Add padding for spacing */
+        }
+        #home-logo {
+            max-width: 18%; /* Shrink the logo size for mobile */
+            margin-right: 0; /* Remove right margin */
+            margin-top: 0.25em; /* Add spacing above the logo */
         }
     }
     @media screen and (max-width: 400px) {
@@ -51,15 +65,21 @@
         .title-text-small {
             font-size: 2rem;
         }
+        #home-logo {
+            max-width: 18%; /* Shrink the logo size for mobile */
+            margin-right: 0; /* Remove right margin */
+            margin-top: 0.25em; /* Add spacing below the logo */
+        }
     }
 </style>
 <div id="home-banner" class="container-fluid mb-0 p-0">
+    <div id="home-logo">
+        <img src="{{ '/assets/img/centennial-lib-logo.png' | relative_url }}" alt="Centennial Logo" class="img-fluid">
+    </div>
     <div id="home-title-box">
         <div class="p-2 text-center text-dark bg-light bg-opacity-75">
             <h1 class="pt-5 px-5">
-                <span class="title-text">The</span>
-                <br>
-                <span class="title-text">Heart</span>
+                <span class="title-text">The Heart</span>
                 <br>
                 <span class="display-3 pt-3 d-inline-block title-text-small">of the University</span>
             </h1>
