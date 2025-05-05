@@ -12,7 +12,7 @@ credits: true
 
 {% include feature/nav-menu.html sections="About This Exhibit; Credits" %}
 
-## About ThiS Exhibit
+## About This Exhibit
 
 The Heart of the University: Parks Library at Iowa State University, a Special Collections and University Archives exhibition, shares 100+ years of library history on campus. As Parks Library celebrates its 100th anniversary in 2025, this exhibition highlights its creation, major renovations, staff, and ways that the collections, services, and programs have changed and expanded over time to meet the evolving needs of the Iowa State community.  
 
