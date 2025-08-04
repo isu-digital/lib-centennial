@@ -24,4 +24,6 @@ Web development by Michael Cummings, Erin Ridnour, and Olivia Wikle, Digital Sch
 
 Graphic design by Haylee Sheppard. 
 
-M. Monica Gillen, communications specialist, University Library, contributed some of the content of this digital exhibition.
+M. Monica Gillen, communications specialist, University Library, contributed some of the content of this digital exhibition. Please also see [Parks Library at 100: Art, Architecture, and Innovation](https://www.lib.iastate.edu/news/parks-library-100-art-architecture-and-innovation-0){:target="_blank" rel="noopener"}.
+
+Kevin D. Hill's research in "A Short History of Iowa State University Library 1858-2007" provided foundational information for library history in this exhibit.

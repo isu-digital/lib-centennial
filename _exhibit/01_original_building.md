@@ -26,6 +26,12 @@ The College hosted a formal dedication ceremony for the new Library on January 2
 
 Charles Brown was hired as Dean of the Library in 1922. Under his leadership, the library would grow to become one of the major land-grand university libraries in the United States. He would expand the collections, update the catalog, and improve services to faculty, staff, students, and the wider public.
 {% include exhibit/exhibit-image-float.html objectid="parkscentennial28" float="start" width="25" %}
+
+Brown published an article in the June 15, 1925 edition of Library Journal, sharing the new library with colleagues around the country.
+
+{% include exhibit/exhibit-image.html objectid="https://ia800804.us.archive.org/BookReader/BookReaderImages.php?zip=/25/items/sim_library-journal_the-library-journal_1925-06-15_50_12/sim_library-journal_the-library-journal_1925-06-15_50_12_jp2.zip&file=sim_library-journal_the-library-journal_1925-06-15_50_12_jp2/sim_library-journal_the-library-journal_1925-06-15_50_12_0011.jp2&id=sim_library-journal_the-library-journal_1925-06-15_50_12&scale=4&rotate=0" link="https://archive.org/details/sim_library-journal_the-library-journal_1925-06-15_50_12/page/532/mode/2up" width="25" caption="Click to view full article" alt="Cover page of Library Journal article 'The Iowa State College Library'" %}
+
+
 After taking over as Head Librarian, Charles Brown worked to professionalize and expand the staff of the library. With a new larger space and the expanded services, increased staffing was needed to operate the library. By the time the new building opened, all full-time staff had turned over, with four of the seven having degrees in Library Science, and the number of part-time staff increased from 13 to 19.
 
 In 1925, the library instituted the Library of Congress classification system. This saw any new acquisition being cataloged in this system while also reclassifying the current holdings from the Dewey Decimal System. This work was done when time and staff availability allowed, which resulted in the project running until 1963. 
