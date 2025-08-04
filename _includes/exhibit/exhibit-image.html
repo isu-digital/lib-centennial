@@ -43,7 +43,7 @@
     <div class="col-md {% if figcount == 1 %}text-center{% elsif forloop.first %}text-md-end{% elsif forloop.last %}text-md-start{% else %}text-center{% endif %}">
         <figure class="figure mx-3{% if include.width %} feature-w-{{ include.width }}{% endif %}">
             {% if include.link %}
-            <a href="{{ image_link }}">
+            <a href="{{ image_link }}" target="_blank" rel="noopener">
                 <img src="{{ image_src }}" alt="{{ image_alt | default: image_caption | escape }}" class="figure-img img-fluid rounded lazyload">
             </a>
             {% else %}
