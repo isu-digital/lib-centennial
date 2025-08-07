@@ -2,6 +2,10 @@
 
 Digital exhibit to celebrate Iowa State University Parks Library building 100th anniversary in 2025.
 
+## Note Regarding Externally hosted images/documents
+
+Throughout this exhibit we've included several images and documents that are housed at and hosted on external organization websites. In these cases, the object links out to these sources when clicked and does not appear on the exhibit's "Browse" or contain internal metadata. 
+
 ----------
 
 ## CollectionBuilder 
