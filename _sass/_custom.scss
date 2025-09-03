@@ -30,3 +30,10 @@
 h1, .merriweather {
     font-family: 'Merriweather';
 }
+// about page nav styles
+.about-nav a {
+    text-decoration: underline;
+}
+.about-nav a:hover {
+    text-decoration: none;
+}
