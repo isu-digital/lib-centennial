@@ -35,5 +35,23 @@ h1, .merriweather {
     text-decoration: underline;
 }
 .about-nav a:hover {
-    text-decoration: none;
+    text-decoration: underline;
+}
+//style links for accessibility
+a {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 a {
+  color: inherit;   /* match the heading color */
+  text-decoration: none;  /* remove underline */
+}
+h1 a:hover {
+  text-decoration: none; 
+}
+
+li.nav-item a {
+    text-decoration: none;  /* remove underline */
 }
