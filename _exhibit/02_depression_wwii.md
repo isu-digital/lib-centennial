@@ -1,5 +1,6 @@
 ---
 title: Depression and WWII Era
+nav-title: Depression and WWII
 layout: exhibit
 permalink: /depression.html
 ---
@@ -20,35 +21,30 @@ By 1930, the Library had reached its storage capacity, and it was left looking f
 
 As the Great Depression brought financial strain and decreased enrollment, the library’s spending on books stagnated. Brown continued to seek library funding and advocated to President Hughes to support the book budget and increase the library’s annual budget for staff, services, open hours, and resources to support student and faculty research.
 
-{% include exhibit/exhibit-image.html objectid="parkscentennial035;parkscentennial035" width="50" %}
-
 In 1936, the books were moved to the Engineering Exhibit Hall after funding to complete the MU was obtained. The scattered collections also began seeing a rise in complaints and hampered services. A new Library Storage Building was approved by the Board, and the $9,000 structure opened in 1940. This building is now the Advanced Machinery Systems Lab. 
 
-{% include exhibit/exhibit-image.html objectid="parkscentennial030" width="50" %}
+{% include exhibit/exhibit-image.html objectid="parkscentennial035;parkscentennial036" width="50" %}
+{% include exhibit/exhibit-image.html objectid="parkscentennial030" width="75" %}
 
 Books were transferred from both the Library and Engineering Exhibit Hall to the new Library Storage Building. By 1947, nearly one third of the Library’s collection were stored there.  After World War II, expanding enrollment saw the increased demand for library materials, and the need for more space for library instruction. Requests again were made to expand the Library, but instead, in 1947 a former barracks was placed on the west side of the Library which then housed all instruction sessions and a reading room.
 
-{% include exhibit/exhibit-image.html objectid="parkscentennial034" width="50" %}
+{% include exhibit/exhibit-image.html objectid="parkscentennial034;universityphotographs1499" width="75" %}
+
+{% include exhibit/exhibit-image-float.html objectid="parkscentennial051" width="25" float="start" %}
 
 The war brought about many changes for the campus community, and the library responded. Dean Brown aimed to promote library services to all citizens in support of the war effort. The library provided reference and interlibrary loan services to state and national defense agencies, offered literature and media programming on “education for victory” topics, and even operated a branch facility at the Iowa State College Annex at Camp Dodge in 1946-1947.
-
-{% include exhibit/exhibit-image.html objectid="universityphotographs1499;parkscentennial051" width="50" %}
 
 {% include exhibit/exhibit-image-float.html objectid="assets/img/war-services-iowa-college.jpg" link="https://hdl.handle.net/2027/uiug.30112105653478" width="25" caption="The War Services of the Iowa State College" alt="Cover page of the Iowa State College Bulletin" float="end" %}
 
 In this period, several iconic works of art were created for the library. President Hughes asked renowned Iowa artist Grant Wood to plan murals for the library. In 1934, Wood served as head of the Public Works of Art Project for Iowa (PWAP, later called the Public Works Administration or the Civil Works Administration), which provided work for unemployed artists. Wood designed the murals and worked with other artists and students to produce them through PWAP. Wood’s murals, oil on canvas, are located on the first floor and the staircase leading to the rotunda of the original building. The murals were inspired by a quotation from Daniel Webster's remarks on "The Agriculture of England" made on January 13, 1840, in the State House in Boston: "When tillage begins, other arts follow. The farmers, therefore, are the founders of human civilization." They depict the evolution of farming practices in the Midwest as well as major areas of Iowa State College at the time: Veterinary Medicine, Farm Crops, Animal Husbandry, Home Economics, Ceramics and Chemical Engineering, Mechanical Engineering, and Aeronautical and Civil Engineering.
 
-{% include exhibit/exhibit-image.html objectid="parkscentennial058;petersenchristian359;universityphotographs1631;universityphotographs1500" width="50" %}
+{% include exhibit/exhibit-carousel2.html items="parkscentennial058;petersenchristian359;universityphotographs1631;universityphotographs1500;parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" height="400" btn-color="primary" %}
 
-{% include exhibit/exhibit-image.html objectid="parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" width="50" %}
+{% include exhibit/exhibit-image.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" width="25" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" caption="Studies for Library Boy: Preliminary Studies, Christian Petersen" %}
 
 Sculptor Christian Petersen was invited by Grant Wood to join the PWAP project in March 1934 and went on to become an artist-in-residence at Iowa State for 21 years. He taught and completed many artworks for campus, including “Library Boy and Girl.” These limestone figures were created and installed in 1944 on either side of the main steps leading up to the rotunda in the original library building, in the same area as Wood’s murals.
 
-{% include exhibit/exhibit-image.html objectid="universityphotographs1630;petersenchristian390;petersenchristian455" width="50" %}
-
-{% include exhibit/exhibit-image.html objectid="parkscentennial055" width="50" %}
-
-{% include exhibit/exhibit-image-float.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" width="25" float="end" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" %}
+{% include exhibit/exhibit-image.html objectid="universityphotographs1630;petersenchristian390;petersenchristian455;parkscentennial055" %}
 
 The library saw new leadership toward the end of this period, as Robert Orr was named Director of the library in 1946.  Orr began his career in the Iowa State College Library as an Order Librarian in 1930, and he took on several roles over the next 16 years, such as Reference Librarian (1935-1941) and Assistant Librarian in Charge of Public Services before becoming Director. 
 

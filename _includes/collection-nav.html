@@ -15,14 +15,14 @@
                 {%- assign navItems = site.data.config-nav | where_exp: 'item', 'item.display_name and item.dropdown_parent == nil' -%} 
                 {% for nav in navItems %}
                 {% if nav.display_name == "Home" %}
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
                 </li>
                 {% endif %}
                 {% endfor %}
                 {% for e in site.exhibit %}
-                <li class="nav-item">
-                    <a class="nav-link{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.title }}</a>
+                <li class="nav-item px-2">
+                    <a class="nav-link{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.nav-title }}</a>
                 </li>
                 {% endfor %}
                 <!--temporarily remove theme pages-->
@@ -37,7 +37,7 @@
                 </li>-->
                 {% for nav in navItems %}
                 {% unless nav.stub %}
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown px-2">
                     {% assign navChildren = site.data.config-nav | where_exp: 'item', 'item.dropdown_parent == nav.display_name' %}
                     {%- assign childStubs = navChildren | map: 'stub' -%}
                     <a class="nav-link  dropdown-toggle{% if childStubs contains page.url %} active{% endif %}" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ nav.display_name }}</a>
@@ -51,7 +51,7 @@
                 {%- endfor -%}
                 {% for nav in navItems %}
                 {% if nav.stub %}{%- unless nav.display_name == "Home" -%}
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="nav-link{% if page.url == nav.stub %} active{% endif %}" href="{{ nav.stub | relative_url }}">{{ nav.display_name }}</a>
                 </li>
                 {% endunless %}{% endif %}

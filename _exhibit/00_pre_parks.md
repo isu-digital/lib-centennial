@@ -1,5 +1,6 @@
 ---
 title: Pre-Parks
+nav-title: Pre-Parks
 layout: exhibit
 permalink: /preparks.html
 ---
