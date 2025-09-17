@@ -24,9 +24,9 @@ The books and the students have changed over time, but the Stacks have been a po
     image_small="https://isuu00001library102stg.blob.core.windows.net/digital-objects/universityphotographs/small/rs-4-8-h_library_146-02-01_sm.jpg"
     juxt_image_small="https://digital.lib.iastate.edu/exhibits/objects/parkscentennial/small/juxt_universityphotographs1492_sm.jpg"
 %}
-<a href="https://digital.lib.iastate.edu/exhibits/parkscentennial/items/universityphotographs1492.html" target="_blank" rel="noopener">Behind the Circulation Desk (Loan Desk), 1944</a>
+<a href="https://digital.lib.iastate.edu/exhibits/parkscentennial/items/universityphotographs1492.html" target="_blank" rel="noopener">Behind the Service Desk, 1944</a>
 
-The second floor rotunda, familiar to many today as the location of Barks at Parks at the end of each semester, was once home to the library circulation desk.
+The second floor rotunda, familiar to many today as the location of Barks at Parks at the end of each semester, was once home to the library service desk.
 <br>
 <br>
 {% include exhibit/exhibit-juxtapose.html
