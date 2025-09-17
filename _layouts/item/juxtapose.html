@@ -1,0 +1,15 @@
+---
+# generic fallback item page layout 
+# displays image or icon depending on "image_thumb"
+layout: item/item-page-base
+---
+
+<div class="card mb-4 text-center">
+    <div class="card-body">
+        <!-- JuxtaposeJS slider -->
+        {% include feature/juxtapose.html %}
+        <div class="mt-2">
+            {% include item/child/juxtapose-download-buttons.html %}
+        </div>
+    </div>
+</div>

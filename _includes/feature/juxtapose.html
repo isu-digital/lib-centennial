@@ -1,0 +1,23 @@
+
+<div id="juxtapose-{{ include.objectid | default: page.objectid }}"></div>
+<script>
+  new juxtapose.JXSlider('#juxtapose-{{ include.objectid | default: page.objectid }}',
+    [
+      {
+        src: '{{ include.image_small | default: page.image_small | default: include.object_location | default: page.object_location }}',
+        label: 'Old'
+      },
+      {
+        src: '{{ include.juxt_image_small | default: page.juxt_image_small | default: include.juxt_object_location | default: page.juxt_object_location }}',
+        label: 'New'
+      }
+    ],
+    {
+      animate: true,
+      showLabels: true,
+      showCredits: false,
+      startingPosition: "50%",
+      makeResponsive: true
+    }
+  );
+</script>
