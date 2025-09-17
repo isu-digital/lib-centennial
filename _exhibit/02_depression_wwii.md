@@ -40,7 +40,7 @@ In this period, several iconic works of art were created for the library. Presid
 
 {% include exhibit/exhibit-carousel2.html items="parkscentennial058;petersenchristian359;universityphotographs1631;universityphotographs1500;parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" height="400" btn-color="primary" %}
 
-{% include exhibit/exhibit-image.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" width="25" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" %}
+{% include exhibit/exhibit-image.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" width="25" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" caption="Studies for Library Boy: Preliminary Studies, Christian Petersen" %}
 
 Sculptor Christian Petersen was invited by Grant Wood to join the PWAP project in March 1934 and went on to become an artist-in-residence at Iowa State for 21 years. He taught and completed many artworks for campus, including “Library Boy and Girl.” These limestone figures were created and installed in 1944 on either side of the main steps leading up to the rotunda in the original library building, in the same area as Wood’s murals.
 
