@@ -77,7 +77,7 @@
 <script>
     /* add item data */
     // title,objectid,image_thumb/small
-    var carouselItems = [ {% for c in selected-items %}[ {{ c.title | escape | jsonify }}, "{{ c.objectid }}", {% if c.image_small %}{{ c.image_small | relative_url | jsonify }}{% else %}{{ c.image_thumb | relative_url | jsonify }}{% endif %}, "{{ c.parentid }}", {{ c.image_alt_text | default: c.title | escape | jsonify }}, {{ c.object_location | relative_url | jsonify }}, {{ c.source | jsonify }} ]{% unless forloop.last %}, {% endunless %}{% endfor %}];
+    var carouselItems = [ {% for c in selected-items %}[ {{ c.title | escape | jsonify }}, "{{ c.objectid }}", {% if c.image_small %}{{ c.image_small | relative_url | jsonify }}{% else %}{{ c.image_thumb | relative_url | jsonify }}{% endif %}, "{{ c.parentid }}", {{ c.image_alt_text | default: c.title | escape | jsonify }},{% if c.object_location contains "pdf" %}{{ c.image_small | relative_url | jsonify }}{% else %}{{ c.object_location | relative_url | jsonify }}{% endif %}, {{ c.source | jsonify }} ]{% unless forloop.last %}, {% endunless %}{% endfor %}];
     /* shuffle items */
     /* carouselItems.sort(function() { return 0.5 - Math.random() }); */
 
