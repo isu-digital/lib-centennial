@@ -18,7 +18,7 @@ Construction continued over the next year, and on January 6, 1925, the first flo
 
 The “H” type building consisted of a basement, two floors on the east wing, and three floors on the west wing with a connecting corridor. The basement housed a receiving room, stacks, printing office, incinerator, and living quarters for a janitor. The first floor’s east wing held the assigned reading room and periodicals room, the corridor held offices and restrooms, and the west wing held a faculty reading room, staff lounge, and stacks. The second floor’s east wing was entirely the main reading room, the corridor held bibliographies and catalogs, and the west wing held the cataloging and ordering units of the library, office space, stacks, and cubicles for students. The third floor of the west wing held seminar and class rooms and additional stacks.
 
-{% include exhibit/exhibit-carousel2.html items="parkscentennial024;parkscentennial025;parkscentennial026;parkscentennial027" height=450 %}
+{% include exhibit/exhibit-carousel2.html items="parkscentennial024;parkscentennial025;parkscentennial026;parkscentennial027" height=450 btn-color="primary" %}
 
 {% include exhibit/exhibit-image.html objectid="parkscentennial010;parkscentennial011;parkscentennial012;parkscentennial013" %}
 {% include exhibit/exhibit-image-float.html objectid="parkscentennial006" float="end" width="25" %}
