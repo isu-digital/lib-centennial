@@ -20,7 +20,7 @@
                     {%- endfor -%}
                     {% for e in site.exhibit %}
                     <li class="nav-item">
-                        <a class="nav-link text-light{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.title }}</a>
+                        <a class="nav-link text-light{% if page.url == e.url %} active{% endif %}" href="{{ e.url | relative_url }}">{{ e.nav-title }}</a>
                     </li>
                     {% endfor %}
                     {%- for nav in navItems -%}
