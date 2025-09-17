@@ -41,7 +41,8 @@ h1, .merriweather {
 .responsive-iframe-container {
   display: flex;
   justify-content: center;
-  margin: 2em 0;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
 }
 
 .responsive-iframe-container iframe {
@@ -49,4 +50,11 @@ h1, .merriweather {
   max-width: 900px;
   aspect-ratio: 16 / 9;
   border: none;
+}
+
+.iframe-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 2em;
 }
