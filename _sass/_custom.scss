@@ -38,3 +38,15 @@ h1, .merriweather {
   font-style: italic;
   margin-top: 2em;
 }
+.responsive-iframe-container {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.responsive-iframe-container iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
