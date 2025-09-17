@@ -1,5 +1,6 @@
 ---
 title: 1925 Building
+nav-title: 1925 Building
 layout: exhibit
 permalink: /1925.html
 ---
@@ -25,6 +26,7 @@ The College hosted a formal dedication ceremony for the new Library on January 2
 
 
 Charles Brown was hired as Dean of the Library in 1922. Under his leadership, the library would grow to become one of the major land-grand university libraries in the United States. He would expand the collections, update the catalog, and improve services to faculty, staff, students, and the wider public.
+
 {% include exhibit/exhibit-image.html objectid="parkscentennial028" width="75" %}
 
 {% include exhibit/exhibit-image-float.html objectid="parkscentennial029" width="25" float="start" %}

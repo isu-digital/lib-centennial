@@ -1,5 +1,6 @@
 ---
 title: Depression and WWII Era
+nav-title: Depression and WWII
 layout: exhibit
 permalink: /depression.html
 ---
@@ -37,7 +38,7 @@ The war brought about many changes for the campus community, and the library res
 
 In this period, several iconic works of art were created for the library. President Hughes asked renowned Iowa artist Grant Wood to plan murals for the library. In 1934, Wood served as head of the Public Works of Art Project for Iowa (PWAP, later called the Public Works Administration or the Civil Works Administration), which provided work for unemployed artists. Wood designed the murals and worked with other artists and students to produce them through PWAP. Wood’s murals, oil on canvas, are located on the first floor and the staircase leading to the rotunda of the original building. The murals were inspired by a quotation from Daniel Webster's remarks on "The Agriculture of England" made on January 13, 1840, in the State House in Boston: "When tillage begins, other arts follow. The farmers, therefore, are the founders of human civilization." They depict the evolution of farming practices in the Midwest as well as major areas of Iowa State College at the time: Veterinary Medicine, Farm Crops, Animal Husbandry, Home Economics, Ceramics and Chemical Engineering, Mechanical Engineering, and Aeronautical and Civil Engineering.
 
-{% include exhibit/exhibit-carousel2.html items="parkscentennial058;petersenchristian359;universityphotographs1631;universityphotographs1500;parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" %}
+{% include exhibit/exhibit-carousel2.html items="parkscentennial058;petersenchristian359;universityphotographs1631;universityphotographs1500;parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" height="400" %}
 
 {% include exhibit/exhibit-image.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" width="25" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" %}
 
