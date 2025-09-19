@@ -46,7 +46,7 @@ In this period, several iconic works of art were created for the library. Presid
 
 {% include exhibit/exhibit-image.html objectid="petersenchristian359" width="50" %}
 
-{% include exhibit/exhibit-carousel2.html items="parkscentennial052;parkscentennial053;parkscentennial054" height="400" btn-color="primary" %}
+{% include exhibit/exhibit-carousel2.html items="parkscentennial052;parkscentennial053;parkscentennial054;parkscentennial057" height="400" btn-color="primary" %}
 
 <div class="container my-4">
     <div class="row">
@@ -62,7 +62,7 @@ In this period, several iconic works of art were created for the library. Presid
     </div>    
     <div class="row">
         <div class="col-md-6">
-            {% include exhibit/exhibit-image.html objectid="parkscentennial057" %}
+            {% include exhibit/exhibit-image.html objectid="universityphotographs1630" width="50" %}
         </div>
         <div class="col-md-6">
             {% include exhibit/exhibit-image.html objectid="https://emuseum.its.iastate.edu/internal/media/dispatcher/22181/full" link="https://emuseum.its.iastate.edu/objects/15897/studies-for-library-boy-preliminary-studies?ctx=4c04297451142cc980dec40bf46bc086f0fb6bcc&idx=12" width="50" caption="Studies for Library Boy: Preliminary Studies, Christian Petersen" %}
@@ -73,7 +73,6 @@ In this period, several iconic works of art were created for the library. Presid
 Sculptor Christian Petersen was invited by Grant Wood to join the PWAP project in March 1934 and went on to become an artist-in-residence at Iowa State for 21 years. He taught and completed many artworks for campus, including “Library Boy and Girl.” These limestone figures were created and installed in 1944 on either side of the main steps leading up to the rotunda in the original library building, in the same area as Wood’s murals.
 
 {% include exhibit/exhibit-image.html objectid="petersenchristian390;petersenchristian455;parkscentennial055" %}
-{% include exhibit/exhibit-image.html objectid="universityphotographs1630" width="25" %}
 
 The library saw new leadership toward the end of this period, as Robert Orr was named Director of the library in 1946.  Orr began his career in the Iowa State College Library as an Order Librarian in 1930, and he took on several roles over the next 16 years, such as Reference Librarian (1935-1941) and Assistant Librarian in Charge of Public Services before becoming Director. 
 
