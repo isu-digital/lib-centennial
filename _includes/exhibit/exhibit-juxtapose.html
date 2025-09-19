@@ -1,4 +1,6 @@
-<div id="juxtapose-{{ include.objectid | default: page.objectid }}"></div>
+<div id="juxtapose-{{ include.objectid | default: page.objectid }}"
+     style="width:{{ include.juxt_width | default: '100%' }};height:{{ include.juxt_height | default: '400px' }};margin-left:auto;margin-right:auto;display:block;">
+</div>
 <script>
   new juxtapose.JXSlider('#juxtapose-{{ include.objectid | default: page.objectid }}',
     [
