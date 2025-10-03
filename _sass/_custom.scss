@@ -47,4 +47,30 @@ a, a:hover {
 
 li.nav-item a {
     text-decoration: none;  /* remove underline */
+.quote-callout {
+  text-align: right;
+  font-size: 1.8em;
+  color: #C8102EEE;
+  font-style: italic;
+  margin-top: 2em;
+}
+.responsive-iframe-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+
+.responsive-iframe-container iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border: none;
+}
+
+.iframe-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: 2em;
 }
