@@ -21,35 +21,28 @@
 .liblogo-corner {
     border-bottom-left-radius: .25rem;
 }
-.liblogo-corner img{ height: 40px; }
 
-@media screen and (max-width: 1024px) {
-    .liblogo-corner img{ max-height: 1.5em; }
+.liblogo-corner img { 
+    height: 40px; 
+}
+
+@media screen and (max-width: 1024px) {}
+    .liblogo-corner img { 
+        max-height: 1.5em;
 }
 
 h1, .merriweather {
     font-family: 'Merriweather';
 }
+
 // about page nav styles
-.about-nav a {
+.about-nav a, a:hover {
     text-decoration: underline;
 }
-.about-nav a:hover {
-    text-decoration: underline;
-}
+
 //style links for accessibility
-a {
+a, a:hover {
     text-decoration: underline;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 a {
-  color: inherit;   /* match the heading color */
-  text-decoration: none;  /* remove underline */
-}
-h1 a:hover {
-  text-decoration: none; 
 }
 
 li.nav-item a {
