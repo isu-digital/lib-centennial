@@ -21,32 +21,16 @@
 .liblogo-corner {
     border-bottom-left-radius: .25rem;
 }
+.liblogo-corner img{ height: 40px; }
 
-.liblogo-corner img { 
-    height: 40px; 
-}
-
-@media screen and (max-width: 1024px) {}
-    .liblogo-corner img { 
-        max-height: 1.5em;
+@media screen and (max-width: 1024px) {
+    .liblogo-corner img{ max-height: 1.5em; }
 }
 
 h1, .merriweather {
     font-family: 'Merriweather';
 }
 
-// about page nav styles
-.about-nav a, a:hover {
-    text-decoration: underline;
-}
-
-//style links for accessibility
-a, a:hover {
-    text-decoration: underline;
-}
-
-li.nav-item a {
-    text-decoration: none;  /* remove underline */
 .quote-callout {
   text-align: right;
   font-size: 1.8em;
@@ -74,3 +58,16 @@ li.nav-item a {
   font-size: 1.1em;
   margin-top: 2em;
 }
+
+/*
+// about page nav styles
+.about-nav a, a:hover {
+    text-decoration: underline;
+}
+
+//style links for accessibility
+
+a, a:hover {
+    text-decoration: underline;
+}
+*/
