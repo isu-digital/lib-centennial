@@ -37,14 +37,19 @@ author: isu-digital
 metadata: parkscentennial 
 # page generation settings [optional!]
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
-# page_gen:
-#   - data: 'demo-metadata'
-#     template: 'item'
-#     name: 'objectid'
-#     dir: 'items'
-#     extension: 'html' 
-#     filter: 'objectid'  
-
+page_gen:
+  - data: 'parkscentennial'
+    template: 'item'
+    name: 'objectid'
+    dir: 'items'
+    extension: 'html' 
+    filter: 'objectid'  
+  - data: 'parkscentennial-memories'
+    template: 'memory'
+    name: 'objectid'
+    dir: 'memories'
+    extension: 'html' 
+    filter: 'objectid'
 ##########
 # Site/Organization Branding 
 #   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo

@@ -1,4 +1,5 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
+transcription,Transcription,,,,
 title,Title,,,DCTERMS.title,headline
 creator,Creator,,,DCTERMS.creator,creator
 date,Date Created,,,DCTERMS.date,dateCreated
@@ -13,3 +14,4 @@ type,Type,,,DCTERMS.type,
 format,Format,,,,encodingFormat
 language,Language,,,DCTERMS.language,
 rightsstatement,,,,DCTERMS.rights,license
+
