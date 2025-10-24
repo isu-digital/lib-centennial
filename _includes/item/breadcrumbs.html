@@ -6,6 +6,6 @@
 {%- endcomment -%}
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a class="text-dark" href="{{ '/' | relative_url }}">Home</a></li>
-    <li class="breadcrumb-item"><a class="text-dark" href="{{ '/browse.html' | relative_url }}">Items</a></li>
-    <li class="breadcrumb-item active text-dark" aria-current="page">{{ page.title | truncatewords: 10 }}</li>
+    <li class="breadcrumb-item">{% if page.url contains "memories" %}<a class="text-dark" href="{{ '/memories.html' | relative_url }}">Memories</a>{% else %}<a class="text-dark" href="{{ '/browse.html' | relative_url }}">Items</a>{% endif %}</li>
+    <li class="breadcrumb-item active text-dark" aria-current="page">{% if page.transcription %}{{ page.transcription | truncatewords: 5 }}{% else %}{{ page.title | truncatewords: 10 }}{% endif %}</li>
 </ol>
