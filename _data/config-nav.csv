@@ -2,8 +2,9 @@ display_name,stub,dropdown_parent
 Home,/,
 Explore,,
 Browse Collection,/browse.html,Explore
-Subjects,/subjects.html,Explore
+Memories,/memories.html,Explore
 Timeline,/parks_timeline.html,Explore
 Juxtapositions,/juxtapositions.html,Explore
+Subjects,/subjects.html,Explore
 Data,/data.html,Explore
 About,/about.html,
