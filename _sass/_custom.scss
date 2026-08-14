@@ -59,6 +59,12 @@ h1, .merriweather {
   margin-top: 2em;
 }
 
+// underline body links on the about page
+.about-contents a:not(.btn):not(.nav-link),
+#technical a:not(.btn) {
+  text-decoration: underline;
+}
+
 /*
 // about page nav styles
 .about-nav a, a:hover {
