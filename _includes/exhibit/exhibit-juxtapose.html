@@ -21,4 +21,16 @@
       makeResponsive: true
     }
   );
+  // juxtapose's handle has role="slider" but no accessible name, and is added only after the images load
+  (function () {
+    var container = document.getElementById('juxtapose-{{ include.objectid | default: page.objectid }}');
+    var observer = new MutationObserver(function () {
+      var handle = container.querySelector('[role="slider"]');
+      if (handle) {
+        handle.setAttribute('aria-label', 'Slide to compare the historic and current images');
+        observer.disconnect();
+      }
+    });
+    observer.observe(container, { childList: true, subtree: true });
+  })();
 </script>
