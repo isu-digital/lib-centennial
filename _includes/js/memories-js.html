@@ -36,39 +36,48 @@ function makeCard(obj) {
     } else {
         thumbIcon = getIcon(obj.template,obj.format,"thumb");
     }
-    var imgAlt = obj.alt ? obj.alt : obj.title;
+    var imgAlt = obj.alt ? obj.alt : (obj.transcription ? 'image of notecard that says ' + obj.transcription : obj.title);
+    // transcriptions are not html-escaped in the data, so escape before using in an attribute
+    imgAlt = imgAlt ? String(imgAlt).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;') : '';
+    // fallback link text so image-only links have an accessible name
+    var linkLabel = '<span class="visually-hidden">View full record' + (obj.title ? ': ' + obj.title : '') + '</span>';
 
     // start card
     var card = '<div class="item col-lg-4 col-md-6 mb-2"><div class="card">';
     // top image for items with image
     if(imgSrc) {
-        card += '<a href="' + itemHref + '"> <img class="card-img-top lazyload" src="' + placeholder + '" data-src="' + imgSrc + '" alt="' + imgAlt + '"></a>';
+        card += '<a href="' + itemHref + '"> <img class="card-img-top lazyload" src="' + placeholder + '" data-src="' + imgSrc + '" alt="' + (imgAlt ? imgAlt : '') + '">' + (imgAlt ? '' : linkLabel) + '</a>';
     }
     // title
-    card += '<div class="card-body text-center"> <h3 class="card-title h4"><a href="' + itemHref + '" class="text-dark">' + obj.title + '</a></h3>';
+    card += '<div class="card-body text-center">';
+    if(obj.title){
+        card += ' <h3 class="card-title h4"><a href="' + itemHref + '" class="text-dark">' + obj.title + '</a></h3>';
+    }
     // icon thumb for item without image
     if(thumbIcon){
-        card += '<p><a href="' + itemHref + '">' + thumbIcon + '</a></p>';
+        card += '<p><a href="' + itemHref + '">' + thumbIcon + linkLabel + '</a></p>';
     }
     // other fields
-    card += '<p class="card-text">';
+    var fieldText = '';
     {% for f in fields %}{% unless f.hidden == 'true' %}
     if(obj[{{ f.field | jsonify }}]){
-    {% if f.display_name %}card += '<strong>{{ f.display_name }}:</strong> ';{% endif %}
+    {% if f.display_name %}fieldText += '<strong>{{ f.display_name }}:</strong> ';{% endif %}
     {% if f.btn == 'true' %}
     var btns = obj[{{ f.field | jsonify }}].split(";");
     for (var i = 0, len = btns.length; i < len; i++) {
         if(btns[i] != "") {
-        card += '<a class="btn btn-sm btn-secondary m-1 text-wrap" href="{{ page.url | relative_url }}#' + encodeURIComponent(btns[i].trim()) + '">' + btns[i].trim() + '</a>';
+        fieldText += '<a class="btn btn-sm btn-secondary m-1 text-wrap" href="{{ page.url | relative_url }}#' + encodeURIComponent(btns[i].trim()) + '">' + btns[i].trim() + '</a>';
         }
     }
     {% else %}
-    card += obj[{{ f.field | jsonify }}];
+    fieldText += obj[{{ f.field | jsonify }}];
     {% endif %}
-    {% unless forloop.last %}card += '<br>';{% endunless %}
+    {% unless forloop.last %}fieldText += '<br>';{% endunless %}
     }
     {% endunless %}{% endfor %}
-    card += '</p>';
+    if(fieldText){
+        card += '<p class="card-text">' + fieldText + '</p>';
+    }
     // media type
     if(obj.template && obj.template != "") {
         mediaIcon = getIcon(obj.template,obj.format,"hidden");
