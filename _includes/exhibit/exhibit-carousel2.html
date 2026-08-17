@@ -46,6 +46,16 @@
 {%- endcomment -%}
 <style>
     #{{ imageCarousel }} .carousel-item { height: {{ include.height | remove: 'px' | strip | default: '300' }}px; }
+
+    /* Restore a clear keyboard-focus indicator removed by Bootstrap's
+       carousel control styles. The two-color ring stays visible against
+       both the dark carousel background and light slide images. */
+    #{{ imageCarousel }} button:focus-visible,
+    #{{ imageCarousel }} a:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 5px #000;
+    }
 </style>
 <div class="card mb-3">
     {% if include.header %}<h5 class="card-header">{{ include.header }}</h5>{% endif %}
