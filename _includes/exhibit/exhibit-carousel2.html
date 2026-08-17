@@ -102,7 +102,7 @@
         slide = `<div class="carousel-item py-2${ i == 0 ? ' active' : '' }">
             <img class="d-block h-100 mx-auto lazyload" alt="${carouselItems[i][4]}" data-src="${itemImg}">
             <div class="carousel-caption">
-                <h5 class="carousel-item-title text-white py-2">${carouselItems[i][0]}</h5>
+                <p class="carousel-item-title text-white py-2 h5">${carouselItems[i][0]}</p>
                 <a class="spotlight gallery-img btn btn-sm btn-{{ btn-color }} text-white" data-download="false" title="${carouselItems[i][4]}" href="${carouselItems[i][5]}">{{ btn-text }}</a>
             </div></div>`;
         slides += slide;
